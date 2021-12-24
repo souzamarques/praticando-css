@@ -1,0 +1,23 @@
+body {
+    background-color: #000000;
+}
+
+.example {
+  color: #fff;
+  text-align: center;
+}
+
+.example-item {
+  display: inline;
+  /* (Perda de altura e largura). Propriedade não permite que a gente 
+      coloque altura e largura nos elementos. Width e height não irão funcionar */
+}
+.example-item_first {
+  background-color: #faa116;
+}
+.example-item_second {
+  background-color: #57c7c3;
+}
+.example-item_third {
+  background-color: #3b97d3;
+}
