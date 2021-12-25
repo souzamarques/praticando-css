@@ -4,18 +4,35 @@ body {
 
 .example {
   color: #fff;
-  text-align: center;
+  text-align: justify;
+}
+.example::after {
+  content: "";
+  display: inline-block;
+  width: 100%;
 }
 
 .example-item {
   /* display: inline;
      (Perda de altura e largura). Propriedade não permite que a gente 
-     coloque altura e largura nos elementos. Width e height não irão funcionar */
-  display: block;
-  /* display: block - o elemento ocupa a linha toda, não é possível ser desse 
-     tipo se tiver um elemento do lado, capacidade de definir altura e largura
-     (height e width)  */
-  width: 33.333%;
+     coloque altura e largura nos elementos. Width e height não irão funcionar 
+  */
+
+  /* display: block;
+      o elemento ocupa a linha toda, não é possível ser desse 
+      tipo se tiver um elemento do lado, capacidade de definir altura e largura
+      (height e width)  
+  */
+
+  display: inline-block;
+  /* junção do display: inline com o display: block. Dessa forma, conseguimos
+     deixar os elementos na mesma linha e definir alutra e largura (height e width).
+     Possível utilizar o comportamento de palavras, dessa forma, conseguimos posicionar
+     os elementos a direita, esquerda, centralizado, ou justificado (justify) fazendo
+     uso do 'after'.
+  */
+
+  width: 25%;
   height: 150px;
 }
 .example-item_first {
@@ -23,10 +40,7 @@ body {
 }
 .example-item_second {
   background-color: #57c7c3;
-  margin-left: auto;
 }
 .example-item_third {
   background-color: #3b97d3;
-  margin-left: auto;
-  margin-right: auto;
 }
