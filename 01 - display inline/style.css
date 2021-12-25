@@ -8,16 +8,25 @@ body {
 }
 
 .example-item {
-  display: inline;
-  /* (Perda de altura e largura). Propriedade não permite que a gente 
-      coloque altura e largura nos elementos. Width e height não irão funcionar */
+  /* display: inline;
+     (Perda de altura e largura). Propriedade não permite que a gente 
+     coloque altura e largura nos elementos. Width e height não irão funcionar */
+  display: block;
+  /* display: block - o elemento ocupa a linha toda, não é possível ser desse 
+     tipo se tiver um elemento do lado, capacidade de definir altura e largura
+     (height e width)  */
+  width: 33.333%;
+  height: 150px;
 }
 .example-item_first {
   background-color: #faa116;
 }
 .example-item_second {
   background-color: #57c7c3;
+  margin-left: auto;
 }
 .example-item_third {
   background-color: #3b97d3;
+  margin-left: auto;
+  margin-right: auto;
 }
